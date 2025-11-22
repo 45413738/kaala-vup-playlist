@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   margin: 0;
   padding: 0;
@@ -149,3 +150,156 @@ h1 {
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
+=======
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFEEDD;
+  font-family: "微軟正黑體", Arial, sans-serif;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* 左邊歌單區 */
+.left-panel {
+  flex: 3;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+/* 多欄歌單 */
+#song-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.song-item {
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.song-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.song-artist {
+  font-size: 14px;
+  color: #666;
+}
+
+.song-genre {
+  display: inline-block;
+  background: #FFEEDD;
+  padding: 2px 6px;
+  margin: 5px 5px 0 0;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* 右邊區塊 */
+.right-panel {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  align-self: flex-start;
+  box-sizing: border-box;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.tag-btn {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  background: #f3c7a6;
+  font-size: 14px;
+}
+
+.tag-btn.active {
+  background: #ff9f43;
+  color: #fff;
+  font-weight: bold;
+}
+
+.search-box label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.search-box input {
+  width: 99%;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.empty-message {
+  margin-top: 10px;
+  color: #888;
+  font-size: 14px;
+}
+
+.avatar-wrapper {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.avatar-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Toast */
+#toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+>>>>>>> 3f0f7108531c92b1468764854a06bd14b5d34241

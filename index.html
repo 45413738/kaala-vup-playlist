@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -53,3 +54,60 @@
   <script src="script.js"></script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>阿茵點歌台</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app">
+    <h1>阿茵點歌台</h1>
+
+    <div class="layout">
+      <!-- 左邊：歌單 -->
+      <div class="left-panel">
+        <h2>歌單</h2>
+        <ul id="song-list"></ul>
+        <div id="empty-message" class="empty-message" style="display:none;">
+          找不到符合條件的歌曲
+        </div>
+      </div>
+
+      <!-- 右邊：篩選 -->
+      <div class="right-panel">
+        <h2>篩選歌單</h2>
+
+        <div class="tag-list">
+          <button class="tag-btn active" data-genre="all">全部</button>
+          <button class="tag-btn" data-genre="流行">流行</button>
+          <button class="tag-btn" data-genre="国风">国风</button>
+          <button class="tag-btn" data-genre="戏腔">戏腔</button>
+          <button class="tag-btn" data-genre="经典">经典</button>
+          <button class="tag-btn" data-genre="民歌">民歌</button>
+          <button class="tag-btn" data-genre="燃">燃</button>
+          <button class="tag-btn" data-genre="甜">甜</button>
+          <button class="tag-btn" data-genre="抒情">抒情</button>
+        </div>
+
+        <div class="search-box">
+          <label>搜尋歌曲：</label>
+          <input id="search-input" type="text" placeholder="輸入歌名或歌手" />
+        </div>
+
+        <div class="avatar-wrapper">
+          <img src="鑄幣大頭.jpg" class="avatar-img" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+>>>>>>> 3f0f7108531c92b1468764854a06bd14b5d34241
