@@ -1,0 +1,205 @@
+:root {
+  --bg-color: #FFEEDD;
+  --panel-bg: rgba(255, 255, 255, 0.6);
+  --primary-color: #ff9f43;
+  --primary-light: #f3c7a6;
+  --text-main: #333;
+  --text-sub: #666;
+  --card-bg: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: "微軟正黑體", Arial, sans-serif;
+  color: var(--text-main);
+}
+
+.app {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* 左邊歌單區 */
+.left-panel {
+  flex: 3;
+  background: var(--panel-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+/* 多欄歌單 */
+#song-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.song-item {
+  padding: 12px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.song-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.song-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.song-artist {
+  font-size: 14px;
+  color: var(--text-sub);
+}
+
+.song-genre {
+  display: inline-block;
+  background: var(--bg-color);
+  padding: 2px 6px;
+  margin: 5px 5px 0 0;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* 右邊區塊 */
+.right-panel {
+  flex: 1;
+  background: var(--panel-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  align-self: flex-start;
+  box-sizing: border-box;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.tag-btn {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  background: var(--primary-light);
+  font-size: 14px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.tag-btn:hover {
+  transform: scale(1.05);
+}
+
+.tag-btn.active {
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+}
+
+.search-box label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.search-box input {
+  width: 99%;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.empty-message {
+  margin-top: 10px;
+  color: #888;
+  font-size: 14px;
+}
+
+.avatar-wrapper {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.avatar-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Toast */
+#toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* 響應式設計 RWD */
+@media (max-width: 992px) {
+  #song-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column-reverse; /* 右側面板在手機版放到上面，讓分類篩選先出現 */
+  }
+  
+  .right-panel, .left-panel {
+    flex: none;
+    width: 100%;
+  }
+
+  #song-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  #song-list {
+    grid-template-columns: 1fr;
+  }
+}

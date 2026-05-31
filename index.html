@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>阿茵點歌台</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app">
+    <h1>阿茵點歌台</h1>
+
+    <div class="layout">
+      <!-- 左邊：歌單 -->
+      <div class="left-panel">
+        <h2>歌單</h2>
+        <div id="loading-message" class="empty-message">載入中...</div>
+        <ul id="song-list"></ul>
+        <div id="empty-message" class="empty-message" style="display:none;">
+          找不到符合條件的歌曲
+        </div>
+      </div>
+
+      <!-- 右邊：篩選 -->
+      <div class="right-panel">
+        <h2>篩選歌單</h2>
+
+        <div class="tag-list" id="tag-list">
+          <!-- 標籤將由 JS 動態生成 -->
+        </div>
+
+        <div class="search-box">
+          <label for="search-input">搜尋歌曲：</label>
+          <input id="search-input" type="text" placeholder="輸入歌名或歌手" />
+        </div>
+
+        <div class="avatar-wrapper">
+          <img src="鑄幣大頭.jpg" class="avatar-img" alt="阿茵大頭貼" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
